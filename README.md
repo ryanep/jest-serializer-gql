@@ -10,4 +10,4 @@ Convert GraphQL schemas to a more readable format for Jest snapshot testing.
 
 In order to use the Jest serializer, add this line to your Jest configuration.
 
-`"snapshotSerializers": ["enzyme-to-json/serializer"]`
+`"snapshotSerializers": ["jest-serializer-graphql-schema"]`
