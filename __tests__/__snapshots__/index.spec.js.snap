@@ -1,6 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`graphql schema matches snapshot 1`] = `
+exports[`graphql schema should match GraphQL schema snapshot with default settings 1`] = `
+type Mutation {
+  login(emailAddress: String!, password: String!): User
+}
+
+type Query {
+  users(firstName: String): [User]
+}
+
+type User {
+  id: ID!
+  firstName: String! @deprecated
+}
+`;
+
+exports[`graphql schema should match snapshot when exporting AST 1`] = `
 {
   "kind": "Document",
   "definitions": [

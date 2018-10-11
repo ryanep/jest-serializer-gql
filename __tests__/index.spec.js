@@ -16,10 +16,15 @@ const schema = `
 	}
 `;
 
-expect.addSnapshotSerializer(createSerializer({ ast: true }));
-
 describe('graphql schema', () => {
-  it('matches snapshot', () => {
+  it('should match snapshot when exporting AST', () => {
+    expect.addSnapshotSerializer(createSerializer({ ast: true }));
+    const ast = gql(schema);
+    expect(ast).toMatchSnapshot();
+  });
+
+  it('should match GraphQL schema snapshot with default settings', () => {
+    expect.addSnapshotSerializer(createSerializer());
     const ast = gql(schema);
     expect(ast).toMatchSnapshot();
   });
