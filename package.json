@@ -19,22 +19,45 @@
     "clean": "rm -rf ./lib",
     "lint": "eslint './src' './tests'",
     "fmt": "prettier --write './src/**/*.js' './tests/**/*.js'",
-    "test": "jest"
+    "test": "jest",
+    "precommit": "lint-staged"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "eslint": "^5.6.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.24.1",
-    "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
+    "husky": "^1.1.2",
     "jest": "^23.6.0",
+    "lint-staged": "^7.3.0",
     "prettier": "^1.14.3"
   },
   "peerDependencies": {
     "graphql": "^14.0.2"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ]
   }
 }
