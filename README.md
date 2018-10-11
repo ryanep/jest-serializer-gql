@@ -1,6 +1,8 @@
 # jest-serializer-graphql-schema
 
-Convert GraphQL schemas to a more readable format for Jest snapshot testing.
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE) [![codecov](https://codecov.io/gh/ryanep/jest-serializer-graphql-schema/branch/master/graph/badge.svg)](https://codecov.io/gh/ryanep/jest-serializer-graphql-schema)
+
+Convert GraphQL schemas to a readable format for Jest snapshot testing.
 
 ## Install
 
@@ -8,6 +10,10 @@ Convert GraphQL schemas to a more readable format for Jest snapshot testing.
 
 ## Usage
 
-In order to use the Jest serializer, add this line to your Jest configuration.
+In order to use the Jest serializer with default options, add this line to your Jest configuration.
 
-`"snapshotSerializers": ["jest-serializer-graphql-schema"]`
+```json
+"snapshotSerializers": [
+  "jest-serializer-graphql-schema"
+]
+```
