@@ -1,10 +1,17 @@
 {
   "name": "jest-serializer-graphql-schema",
-  "version": "1.0.0",
   "description": "Serialize GraphQL schemas for Jest snapshot tests",
-  "main": "lib/index.js",
+  "version": "1.0.0",
   "author": "Ryan Elliott-Potter <ryan@ryanep.com>",
   "license": "MIT",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanep/jest-serializer-graphql-schema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanep/jest-serializer-graphql-schema/issues"
+  },
   "keywords": [
     "jest",
     "snapshot",
@@ -22,6 +29,9 @@
     "test": "jest",
     "precommit": "lint-staged"
   },
+  "dependencies": {
+    "graphql": "^14.0.2"
+  },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
@@ -29,6 +39,7 @@
     "@babel/register": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
+    "codecov": "^3.1.0",
     "eslint": "^5.6.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.1.0",
@@ -39,9 +50,6 @@
     "jest": "^23.6.0",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3"
-  },
-  "peerDependencies": {
-    "graphql": "^14.0.2"
   },
   "jest": {
     "coverageThreshold": {
