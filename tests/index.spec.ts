@@ -16,16 +16,24 @@ const schema = `
 	}
 `;
 
-describe('graphql schema', () => {
-  it('should match snapshot when exporting AST', () => {
-    expect.addSnapshotSerializer(createSerializer({ ast: true }));
+const query = `
+  query users {
+    users {
+      id
+    }
+  }
+`;
+
+describe('graphql schema', (): void => {
+  it('should match graphql schema snapshot', (): void => {
+    expect.addSnapshotSerializer(createSerializer());
     const ast = gql(schema);
     expect(ast).toMatchSnapshot();
   });
 
-  it('should match GraphQL schema snapshot with default settings', () => {
+  it('should match graphql query snapshot', (): void => {
     expect.addSnapshotSerializer(createSerializer());
-    const ast = gql(schema);
+    const ast = gql(query);
     expect(ast).toMatchSnapshot();
   });
 });

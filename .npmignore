@@ -1,10 +1,13 @@
-src
-coverage
-tests
+src/
+coverage/
+__tests__/
 yarn.lock
+jest.config.js
 .DS_Store
 .babelrc
 .editorconfig
 .eslintrc
 .prettierignore
 .prettierrc
+.huskyrc
+.lintstagedrc

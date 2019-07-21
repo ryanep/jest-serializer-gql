@@ -1,12 +1,12 @@
-import createSerializer from '../src/create-serializer';
+import { createSerializer } from '../src/create-serializer';
 
-describe('createSerializer', () => {
-  it('should expose a test function', () => {
+describe('createSerializer', (): void => {
+  it('should expose a test function', (): void => {
     const serializer = createSerializer();
     expect(typeof serializer.test).toEqual('function');
   });
 
-  it('should expose a print function', () => {
+  it('should expose a print function', (): void => {
     const serializer = createSerializer();
     expect(typeof serializer.print).toEqual('function');
   });

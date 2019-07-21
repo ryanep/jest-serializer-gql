@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`graphql schema should match graphql query snapshot 1`] = `
+query users {
+  users {
+    id
+  }
+}
+`;
+
+exports[`graphql schema should match graphql schema snapshot 1`] = `
+type User {
+  id: ID!
+  firstName: String! @deprecated
+}
+
+type Query {
+  users(firstName: String): [User]
+}
+
+type Mutation {
+  login(emailAddress: String!, password: String!): User
+}
+`;
