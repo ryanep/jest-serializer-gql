@@ -1,3 +1,3 @@
 import { createSerializer } from './create-serializer';
 
-export { createSerializer };
+export = createSerializer();

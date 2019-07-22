@@ -1,5 +1,5 @@
 import gql from 'graphql-tag';
-import { createSerializer } from '../src';
+import { createSerializer } from '../src/create-serializer';
 
 const schema = `
 	type User {
