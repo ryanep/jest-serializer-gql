@@ -7,7 +7,7 @@
     "noUnusedLocals": true,
     "skipLibCheck": true,
     "outDir": "lib",
-    "sourceMap": true,
+    "sourceMap": false,
     "target": "es2017"
   },
   "exclude": ["node_modules", "**/*.spec.ts"]

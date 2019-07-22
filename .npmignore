@@ -1,8 +1,11 @@
 src/
 coverage/
-__tests__/
+tests/
 yarn.lock
-jest.config.js
+jest.config.json
+tsconfig.json
+*.tgz
+*.map
 .DS_Store
 .babelrc
 .editorconfig
