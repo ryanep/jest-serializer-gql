@@ -1,11 +1,11 @@
 import { ASTNode } from 'graphql';
-import { isGraphqlSchema } from './utils';
+import { isSchema } from 'graphql/type/schema';
 import { format } from './format';
 
 export const createSerializer = (): jest.SnapshotSerializerPlugin => {
   return {
     test(node: ASTNode): boolean {
-      return isGraphqlSchema(node);
+      return isSchema(node);
     },
     print(node: ASTNode): string {
       return format(node);
