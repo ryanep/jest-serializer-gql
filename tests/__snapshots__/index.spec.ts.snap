@@ -22,3 +22,5 @@ type Mutation {
   login(emailAddress: String!, password: String!): User
 }
 `;
+
+exports[`graphql schema should not fail if the provided node is null 1`] = `null`;
