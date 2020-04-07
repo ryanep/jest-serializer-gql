@@ -39,7 +39,6 @@ describe('graphql schema', (): void => {
 
   it('should not fail if the provided node is null', () => {
     expect.addSnapshotSerializer(createSerializer());
-
     expect(null).toMatchSnapshot();
   });
 });
