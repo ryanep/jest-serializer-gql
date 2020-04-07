@@ -24,14 +24,14 @@ const query = `
   }
 `;
 
-describe('graphql schema', (): void => {
-  it('should match graphql schema snapshot', (): void => {
+describe('serializer', (): void => {
+  it('should match schema snapshot', (): void => {
     expect.addSnapshotSerializer(createSerializer());
     const ast = gql(schema);
     expect(ast).toMatchSnapshot();
   });
 
-  it('should match graphql query snapshot', (): void => {
+  it('should match query snapshot', (): void => {
     expect.addSnapshotSerializer(createSerializer());
     const ast = gql(query);
     expect(ast).toMatchSnapshot();

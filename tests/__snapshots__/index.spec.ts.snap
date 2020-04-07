@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`graphql schema should match graphql query snapshot 1`] = `
+exports[`serializer should match query snapshot 1`] = `
 query users {
   users {
     id
@@ -8,7 +8,7 @@ query users {
 }
 `;
 
-exports[`graphql schema should match graphql schema snapshot 1`] = `
+exports[`serializer should match schema snapshot 1`] = `
 type User {
   id: ID!
   firstName: String! @deprecated
@@ -23,4 +23,4 @@ type Mutation {
 }
 `;
 
-exports[`graphql schema should not fail if the provided node is null 1`] = `null`;
+exports[`serializer should not fail if the provided node is null 1`] = `null`;
