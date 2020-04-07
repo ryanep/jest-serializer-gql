@@ -10,12 +10,19 @@
   "env": {
     "jest/globals": true
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".tsx"]
+      }
+    }
+  },
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "rules": {
     "import/prefer-default-export": 0,
-    "import/no-unresolved": "off"
+    "import/extensions": 0
   }
 }
