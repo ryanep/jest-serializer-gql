@@ -1,7 +1,7 @@
 {
   "name": "jest-serializer-gql",
   "description": "Serialize GraphQL schemas for Jest snapshot tests",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "author": "Ryan Elliott-Potter <ryan@ryanep.com>",
   "license": "MIT",
   "main": "lib/index.js",
