@@ -2,5 +2,11 @@
   "*.ts": [
     "eslint",
     "prettier --write"
+  ],
+  "*.{md,mdx}": [
+    "alex"
+  ],
+  "package.json": [
+    "sort-package-json"
   ]
 }
